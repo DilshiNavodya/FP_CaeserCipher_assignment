@@ -18,11 +18,10 @@ object CeasarCipher{
 object caeser{
   def main(args: Array[String]){
     val text="Functional Programming"
+    val shift = 3
     println("Plaintext  => " + text)
-    println("Encrypted => " + CeasarCipher.encrypt(3,text))
-    println("-------------------------------------------------------")
-    val decry="Ixqfwlrqdo Surjudpplqj"
-    println("Encrypted text  => " + decry)
-    println("Decrypted  => " + CeasarCipher.decrypt(3,decry))
+    val encoded= CeasarCipher.encrypt(shift,text)
+    println("Ciphertext => " + encoded)
+    println("Decrypted  => " + CeasarCipher.decrypt(shift,encoded))
   }
 }
